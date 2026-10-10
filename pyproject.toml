@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pisa-attn"
+version = "0.1.0"
+description = "PISA pyramid block selection and sparse causal attention"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["jax", "numpy"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
